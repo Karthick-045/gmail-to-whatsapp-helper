@@ -6,47 +6,51 @@ import { Button } from "./ui/button";
 const mockEmails = [
   {
     id: 1,
-    sender: "John Doe",
-    email: "john@company.com",
-    subject: "Project Update Required",
-    preview: "Hi, I wanted to follow up on the project status...",
+    sender: "RMD Placement Cell",
+    email: "placement@rmd.ac.in",
+    subject: "TCS Recruitment Drive - Register Now!",
+    preview: "Karthi, you received mail from RMD Placement Cell regarding upcoming TCS campus drive...",
+    shortMsg: "🎯 Karthi, you received mail from RMD Placement Cell about TCS drive!",
     time: "2 min ago",
     starred: true,
     priority: "high",
-    aiSuggestion: "Suggest sending a brief status update with timeline",
+    aiSuggestion: "Register immediately - deadline in 2 days",
   },
   {
     id: 2,
-    sender: "Sarah Wilson",
-    email: "sarah@client.io",
-    subject: "Meeting Tomorrow",
-    preview: "Can we reschedule our meeting to 3 PM?",
+    sender: "Infosys Campus",
+    email: "campus@infosys.com",
+    subject: "Interview Scheduled",
+    preview: "Your interview has been scheduled for next Monday...",
+    shortMsg: "📅 Karthi, Infosys scheduled your interview for Monday!",
     time: "15 min ago",
-    starred: false,
-    priority: "medium",
-    aiSuggestion: "Confirm availability and send calendar invite",
+    starred: true,
+    priority: "high",
+    aiSuggestion: "Confirm attendance and prepare for technical round",
   },
   {
     id: 3,
-    sender: "Newsletter",
-    email: "news@techweekly.com",
-    subject: "Weekly Tech Digest",
-    preview: "This week's top stories in technology...",
+    sender: "RMD Training Dept",
+    email: "training@rmd.ac.in",
+    subject: "Aptitude Workshop Tomorrow",
+    preview: "Reminder for the aptitude training session...",
+    shortMsg: "📚 Karthi, aptitude workshop reminder for tomorrow!",
     time: "1 hour ago",
     starred: false,
-    priority: "low",
-    aiSuggestion: "Archive - no response needed",
+    priority: "medium",
+    aiSuggestion: "Set reminder and prepare materials",
   },
   {
     id: 4,
-    sender: "Mike Chen",
-    email: "mike@startup.co",
-    subject: "Partnership Opportunity",
-    preview: "We'd love to discuss a potential collaboration...",
+    sender: "Wipro Careers",
+    email: "careers@wipro.com",
+    subject: "Application Status Update",
+    preview: "Your application has moved to the next stage...",
+    shortMsg: "✅ Karthi, your Wipro application progressed!",
     time: "3 hours ago",
     starred: true,
     priority: "high",
-    aiSuggestion: "Schedule a call to discuss further",
+    aiSuggestion: "Check portal for next steps",
   },
 ];
 
@@ -139,8 +143,9 @@ export function EmailNotifications() {
                       </span>
                     </div>
                   </div>
-                  <p className="text-sm font-medium mt-1">{email.subject}</p>
-                  <p className="text-sm text-muted-foreground truncate">{email.preview}</p>
+                  {/* Short Message Display */}
+                  <p className="text-sm font-medium mt-1 text-primary">{email.shortMsg}</p>
+                  <p className="text-xs text-muted-foreground mt-0.5">{email.subject}</p>
 
                   {/* AI Suggestion & Actions */}
                   <AnimatePresence>

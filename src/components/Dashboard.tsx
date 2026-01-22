@@ -46,8 +46,8 @@ export function Dashboard() {
                 <div className="absolute -top-1 -right-1 h-3 w-3 bg-accent rounded-full animate-pulse" />
               </div>
               <div>
-                <h1 className="text-xl font-semibold tracking-tight">NotifyAI</h1>
-                <p className="text-xs text-muted-foreground">Smart Notification Manager</p>
+                <h1 className="text-xl font-semibold tracking-tight">Hey, Karthi! 👋</h1>
+                <p className="text-xs text-muted-foreground">Your AI Notification Manager</p>
               </div>
             </motion.div>
 

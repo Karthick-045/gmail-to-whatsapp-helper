@@ -5,17 +5,24 @@ import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 
+const userProfile = {
+  name: "Karthi",
+  phone: "+91 XXXXX XXXXX", // User's WhatsApp
+};
+
 const recentContacts = [
-  { id: 1, name: "John Doe", phone: "+1 234 567 8900", avatar: "J" },
-  { id: 2, name: "Team Group", phone: "12 members", avatar: "T", isGroup: true },
-  { id: 3, name: "Sarah Wilson", phone: "+1 987 654 3210", avatar: "S" },
+  { id: 1, name: "RMD Placement", phone: "+91 44 2678 1234", avatar: "R" },
+  { id: 2, name: "College Friends", phone: "8 members", avatar: "C", isGroup: true },
+  { id: 3, name: "Family", phone: "5 members", avatar: "F", isGroup: true },
+  { id: 4, name: "Study Group", phone: "12 members", avatar: "S", isGroup: true },
 ];
 
 const quickReplies = [
-  "I'll check and get back to you",
+  "Got it, will check now!",
   "Thanks for the update!",
-  "Let's schedule a call",
-  "Received, processing now",
+  "On my way!",
+  "Will do 👍",
+  "Noted, thanks!",
 ];
 
 export function WhatsAppComposer() {
@@ -37,13 +44,19 @@ export function WhatsAppComposer() {
   return (
     <div className="glass rounded-2xl overflow-hidden">
       <div className="p-5 border-b border-border/50">
-        <div className="flex items-center gap-3">
-          <div className="h-10 w-10 rounded-xl bg-whatsapp/10 flex items-center justify-center">
-            <MessageCircle className="h-5 w-5 text-whatsapp" />
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <div className="h-10 w-10 rounded-xl bg-whatsapp/10 flex items-center justify-center">
+              <MessageCircle className="h-5 w-5 text-whatsapp" />
+            </div>
+            <div>
+              <h2 className="font-semibold">WhatsApp</h2>
+              <p className="text-sm text-muted-foreground">Send quick messages</p>
+            </div>
           </div>
-          <div>
-            <h2 className="font-semibold">WhatsApp Composer</h2>
-            <p className="text-sm text-muted-foreground">Send AI-powered messages</p>
+          <div className="text-right">
+            <p className="text-sm font-medium">{userProfile.name}</p>
+            <p className="text-xs text-muted-foreground">{userProfile.phone}</p>
           </div>
         </div>
       </div>
